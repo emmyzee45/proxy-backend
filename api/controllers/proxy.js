@@ -10,6 +10,7 @@ export const searchProxy = async(req, res) => {
         const result = await axios.post(`${base_url}/api/search`, data);
         res.status(200).json(result.data);
     }catch(err) {
+        console.log(err)
         res.status(500).json(err);
     }
 }
